@@ -1,55 +1,50 @@
-# JEV Deterministic Decision Benchmark (JEV-DD-1.0)
-### 1,000-Decision Evaluation Report, Diagnostic Behavioral Fingerprint & Benchmark Package
+# JEV Deterministic Decision Benchmark (`JEV-DD-1.0`)
+### 1,000-Decision Evaluation Report, Behavioral Fingerprint & System Design Guide
 
+[![Live Interactive Dashboard](https://img.shields.io/badge/%F0%9F%9A%80%20Live%20Dashboard-GitHub%20Pages-sky.svg)](https://etsabary.github.io/jev-deterministic-benchmark/)
 [![Benchmark Sample](https://img.shields.io/badge/sample-1%2C000%20decisions-blue.svg)](#)
 [![Model](https://img.shields.io/badge/model-jev--latest%20(v1.13.0)-purple.svg)](#)
 [![Accuracy](https://img.shields.io/badge/overall%20accuracy-81.7%25-green.svg)](#)
 [![High Confidence Accuracy](https://img.shields.io/badge/confidence%20%E2%89%A50.95-99.8%25%20(492%2F493)-emerald.svg)](#)
-[![Discrimination](https://img.shields.io/badge/ROC%20AUC-~0.93-purple.svg)](#)
 
-This repository contains the full results, multi-channel runner harness, diagnostic analysis, vector visualizations, and raw data for **1,000 decisions** evaluated on the **JEV Deterministic Decision Benchmark (`JEV-DD-1.0`)**.
-
----
-
-## 1. Executive Summary
-
-Across 1,000 evaluated decisions across three independent channels (TypeSafe Direct, OpenRouter, and Experiential Labs), the model achieved an overall accuracy of **81.7% (817 / 1,000)**. 
-
-However, reducing JEV's capability to a single headline number obscures its true behavioral architecture. A clear behavioral dichotomy emerges:
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        JEV 1,000-DECISION CAPABILITY SPECTRUM                          │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 1. VERY STRONG (90% – 100%)                                                            │
-│    • Static propositional relationships        • Implication & contraposition          │
-│    • Set / quantifier relationships            • Transitivity & ordering               │
-│    • Graph reachability                        • Rule priorities & exceptions          │
-│    • Source authority & stale records          • Counterexample detection              │
-│    • Deterministic planning with preconditions • Preference selection                  │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 2. MODERATE (65% – 90%)                                                                │
-│    • Multi-constraint assignment               • Sufficiency / inconsistency           │
-│    • Belief perspectives                       • Causal intervention                   │
-│    • Scheduling                                                                        │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 3. WEAK (50% – 65%)                                                                    │
-│    • Spatial updating & movement               • Truth-teller global consistency       │
-│    • Token / location tracking (object swaps)                                          │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 4. EXTREMELY WEAK (< 35%)                                                              │
-│    • Accumulating exact counts across evaluated propositions (33.3% All / 43.5% Core)  │
-│    • Executing sequential transformations on an evolving state (13.2% All / 7.7% Core)│
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-> **Central Architectural Finding**: JEV behaves primarily as a **graded evidence aggregation / candidate compatibility scorer**, not a general-purpose serial state machine. It is near-flawless at evaluating static candidate states against rules, but deteriorates sharply when tasks require **repeatedly mutating and replacing intermediate state through time**, or enforcing **hard cardinality equality** ("satisfy exactly $N$" vs. "satisfy as many as possible").
+> 🌐 **Explore the Live Interactive Visualization Dashboard:**  
+> 👉 **[https://etsabary.github.io/jev-deterministic-benchmark/](https://etsabary.github.io/jev-deterministic-benchmark/)**
 
 ---
 
-## 2. Capability Profile Across 25 Reasoning Families
+## ⚡ The Decision Engineer's Cheat Sheet (Read This First)
 
-Performance is compared across **All items** (including core questions, robustness variants, contrasts, and candidate probes) and **Core items** (ordinary single-step problems).
+If you are designing decision-making pipelines or agentic workflows with **JEV (`jev-latest` / `jev-1.13.0`)**, here is the immediate operational rulebook derived from 1,000 benchmark decisions:
+
+| Workflow Pattern | Operational Verdict | Observed Performance | System Design Recommendation |
+| :--- | :---: | :---: | :--- |
+| **Static Relational Logic** <br>*(Conditionals, Contraposition, Quantifiers, Boolean Scope, Directed Reachability, Source Authority)* | 🟢 **GREEN LIGHT** | **97% – 100%** <br>*(Flawless)* | **Safe for direct, autonomous execution.** JEV excels at evaluating static candidate states against declarative rules and constraints. |
+| **High-Confidence Autonomous Gate** <br>*(Decisions with reported confidence $\ge 0.95$)* | 🟢 **GREEN LIGHT** | **99.8%** <br>*(492 / 493 correct)* | **Use confidence as an execution gate.** Half of all queries (49.3%) trigger $\ge 0.95$. Allow these to run unreviewed; route $< 0.90$ to verification. |
+| **Constraint Satisfaction & Search** <br>*(Scheduling, One-to-One Assignments, Sufficiency, Causal Interventions)* | 🟡 **YELLOW LIGHT** | **65% – 90%** <br>*(Moderate)* | **Use programmatic verification.** JEV solves these moderately well, but reliability degrades as simultaneous constraints multiply. |
+| **Sequential State Transformation** <br>*(Tracking cards/tokens through a series of ordered swaps or mutations)* | 🔴 **RED LIGHT** | **13.2% All** <br>**7.7% Core** | **DO NOT use JEV as a serial state machine.** JEV gets trapped in intermediate states (**81.8% of errors**). Offload step-by-step state propagation to Python/code. |
+| **Exact Cardinality Counting** <br>*(Puzzles requiring "satisfy exactly $N$ true conditions")* | 🔴 **RED LIGHT** | **33.3% All** <br>**43.5% Core** | **DO NOT rely on JEV for exact counts.** JEV acts as a *compatibility maximizer* (**84% of errors** choose options with *more* truths than required). Use symbolic counters. |
+| **Indirect Exclusion Chains** <br>*(Deducing an entity's state when it has no direct clues)* | 🔴 **RED LIGHT** | **Systematic Blindspot** | If Entity $X$ has no direct rule and depends on indirect elimination across others, JEV frequently defaults to "more than one is possible" (even at 0.95 confidence). |
+
+---
+
+## 📊 Benchmark Results at a Glance
+
+### 1. Capability Profile Across 25 Reasoning Families (All vs. Core)
+![Reasoning Families Capability Spectrum](charts/reasoning_families_accuracy.svg)
+
+---
+
+### 2. Operational Confidence Calibration & "Act vs. Escalate" Curve
+![Confidence Calibration Profile](charts/confidence_calibration.svg)
+
+---
+
+### 3. Anatomy of Signature Failure Modes (F09 & F13)
+![Anatomy of Failure Modes](charts/failure_modes_f09_f13.svg)
+
+---
+
+## 🔬 In-Depth Capability Breakdown
 
 | Ability / Reasoning Family | All Accuracy | Core Accuracy | Behavioral Classification |
 | :--- | :---: | :---: | :--- |
@@ -81,15 +76,12 @@ Performance is compared across **All items** (including core questions, robustne
 
 ---
 
-## 3. Concrete Diagnostic Case Studies (How & Why JEV Fails)
+## 🎯 Concrete Failure Case Studies (What Fails & Why)
 
-The benchmark's diagnostic power lies in isolating the exact mechanism of failure. Below are concrete, verbatim examples from the evaluated dataset.
-
-### Case Study 1: Sequential Procedure Execution (`J001646`)
+### Case 1: Sequential Procedure Execution (`J001646`)
 * **Family**: `F13` (Sequential Procedures)
 * **Underlying Failure Mechanism**: **Stale Intermediate-State Attractor Trap**. JEV performs initial transformations but leaks an uncompleted intermediate state into its final readout.
 
-#### Problem:
 > **Context:** Five name cards start in this left-to-right order: `Pia, Noel, Zane, Gus, Quin`. Carry out the numbered steps in numerical order. Positions always refer to the current order, not the initial order.
 > 
 > * Step 1: Reverse the whole left-to-right order.
@@ -102,7 +94,7 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 > **Question:** Which name is in the fifth position at the end?  
 > Options: `(1) Zane`, `(2) Pia`, `(3) Quin`, `(4) Gus`, `(5) Noel`
 
-#### Execution Trace & Failure Analysis:
+#### Execution Trace:
 1. **Initial**: `[Pia, Noel, Zane, Gus, Quin]`
 2. **Step 1 (Reverse)**: `[Quin, Gus, Zane, Noel, Pia]`
 3. **Step 2 (Reverse)**: `[Pia, Noel, Zane, Gus, Quin]`
@@ -113,15 +105,14 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 * **Gold Option**: **Option 5 (Noel)**
 * **JEV's Selection**: **Option 2 (Pia)**
-* **Diagnostic Finding**: JEV did not guess randomly. It selected **Pia**, which occupied the queried fifth position **at Step 3**. Across 33 sequential procedure errors, **81.8% (27/33)** chose an object that genuinely occupied the queried slot at an earlier point in the sequence.
+* **Diagnostic Finding**: JEV selected **Pia**, which occupied the queried fifth position **at Step 3**. Across 33 sequential procedure errors, **81.8% (27/33)** chose an object that genuinely occupied the queried slot at an earlier point in the sequence.
 
 ---
 
-### Case Study 2: Exact Truth Counting (`J001161`)
+### Case 2: Exact Truth Counting (`J001161`)
 * **Family**: `F09` (Exact Truth Counting)
 * **Underlying Failure Mechanism**: **Compatibility Maximizer Bias**. JEV treats the prompt as *"find the candidate that satisfies the most evidence"* rather than enforcing the hard equality constraint *"satisfies exactly 3"*.
 
-#### Problem:
 > **Context:** A prize is in exactly one of five chests: `Hazel, Pine, Cedar, Oak and Laurel`. Exactly three of the numbered inscriptions below are true.
 > 
 > * Inscription 1: The prize is not in the Pine chest.
@@ -148,11 +139,10 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 ---
 
-### Case Study 3: Candidate Probe Proof (`J000868`)
+### Case 3: Candidate Probe Proof (`J000868`)
 * **Family**: `Candidate Probes` (Cardinality / Evaluation without search)
 * **Underlying Failure Mechanism**: **Enumeration Breakdown Inside a Supplied State**. Proves that failures are not caused by search space exhaustion.
 
-#### Problem:
 > **Context:** Wren, Ava, Ravi, Ben and Dion each give one presentation on Monday through Friday.
 > * Clue 1: Ava does not present on Tuesday.
 > * Clue 2: Ben presents earlier in the week than Ravi.
@@ -177,11 +167,10 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 ---
 
-### Case Study 4: Spatial Movement Reversal (`J001860`)
+### Case 4: Spatial Movement Reversal (`J001860`)
 * **Family**: `Spatial Tracking`
 * **Underlying Failure Mechanism**: **Primitive Operation Semantic Reversal**. Confusing backward movement with movement in the facing direction.
 
-#### Problem:
 > **Context:** A robot named Jia starts at a marked point facing East. A turn changes only its facing direction. Moving forward or backward moves it one block without changing its facing direction.
 > * Command 1: Turn a quarter-turn to the right. (Now facing South)
 > * Command 2: Move backward one block. (Moves North)
@@ -197,11 +186,10 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 ---
 
-### Case Study 5: Spatial Orientation Trap (`J001892`)
+### Case 5: Spatial Orientation Trap (`J001892`)
 * **Family**: `Spatial Tracking`
 * **Underlying Failure Mechanism**: **Orientation vs. Displacement Confusion & Early State Anchoring**.
 
-#### Problem:
 > **Context:** A robot named Dion starts facing North.
 > * Command 1: Turn a quarter-turn to the left. (Faces West)
 > * Command 2: Turn a quarter-turn to the left. (Faces South)
@@ -219,11 +207,10 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 ---
 
-### Case Study 6: Indirect Exclusion Chain (`J001325`)
+### Case 6: Indirect Exclusion Chain (`J001325`)
 * **Family**: `One-to-One Assignments`
 * **Underlying Failure Mechanism**: **Failure to Close Indirect Exclusion Chains**. Unable to deduce uniqueness when the queried entity has no direct clues.
 
-#### Problem:
 > **Context:** Cara, Wren and Faye each use exactly one locker: `Elm, Oak and Fern`. Each locker is used by exactly one person.
 > * Clue 1: Cara uses the Fern locker.
 > * Clue 2: Faye does not use the Elm locker.
@@ -243,51 +230,29 @@ The benchmark's diagnostic power lies in isolating the exact mechanism of failur
 
 ---
 
-## 4. Operational Deployment: The "Act vs. Escalate" Architecture
+## ⚖️ Positional Balance & Semantic Invariance
 
-Across 1,000 decisions, JEV's reported confidence is exceptionally well-calibrated (ROC AUC $\approx 0.93$):
+![Positional Balance Across Options](charts/option_distribution_balance.svg)
 
-| Confidence Threshold | Decisions Retained | Empirical Accuracy | Total Errors in Tier |
-| :---: | :---: | :---: | :---: |
-| **$\ge 0.50$** | 786 (78.6%) | **93.4%** | 52 |
-| **$\ge 0.60$** | 734 (73.4%) | **95.5%** | 33 |
-| **$\ge 0.70$** | 680 (68.0%) | **96.9%** | 21 |
-| **$\ge 0.80$** | 632 (63.2%) | **97.9%** | 13 |
-| **$\ge 0.90$** | 557 (55.7%) | **99.3%** | 4 |
-| **$\ge 0.95$** | **493 (49.3%)** | **99.8%** | **1 (`J001325`)** |
-
-### System Design Recommendation
-In real-world deployment, JEV should be deployed under an **Act vs. Escalate** policy:
-1. **Confidence $\ge 0.95$ (Autonomous Execution)**:  
-   * **49.3% of all queries** trigger this tier, where accuracy is **99.8% (492/493 correct)**. Safe for fully autonomous, unreviewed downstream action.
-2. **Confidence $0.90 - 0.94$ (High-Confidence Supervised)**:  
-   * Cumulative accuracy is **99.3%**. Only 4 total errors observed in 1,000 decisions.
-3. **Confidence $< 0.90$ (Verification / Escalation)**:  
-   * Route query to a symbolic solver, programmatic verifier, or human review. This eliminates over **99% of all model errors** while allowing nearly half of all operations to execute autonomously.
-
----
-
-## 5. Positional Balance & Semantic Consistency
-
-* **Option Selection Balance**:
-  Across 1,000 decisions, choices are virtually uniform across all 5 slots (target = 20.0% / 200 items):
+* **Option Selection Uniformity**:  
+  Across 1,000 decisions, choices are virtually uniform across all 5 slots (expected = 20.0% / 200 items):
   * Option 1: **206 (20.6%)**
   * Option 2: **201 (20.1%)**
   * Option 3: **188 (18.8%)**
   * Option 4: **198 (19.8%)**
   * Option 5: **207 (20.7%)**
-* **Semantic Invariance**:
-  Across 94 pairs where option positions were systematically rotated, JEV chose the **same underlying semantic meaning 92.6% of the time**, and **100% (15/15)** on identical clones, proving it tracks semantic concepts rather than slot position heuristics.
+* **Semantic Invariance**:  
+  Across 94 pairs where option positions were rotated, JEV chose the **same underlying semantic meaning 92.6% of the time**, and **100% (15/15)** on identical problem clones, confirming that decisions reflect genuine semantic evaluation rather than positional artifacts.
 
 ---
 
-## 6. Repository Assets & Structure
+## 📦 Repository Structure & Data Access
 
 ```text
-├── README.md                           # This report
+├── README.md                           # This report & design guide
 ├── DIAGNOSTIC_ANALYSIS.md              # Living cumulative diagnostic analysis log
 ├── run_benchmark.py                    # Multi-channel benchmark runner (TypeSafe, OpenRouter, Experiential)
-├── test_offline.py                     # Offline test suite (7 tests, 0.17s)
+├── test_offline.py                     # Offline test suite (7 tests, 0.22s)
 ├── docs/
 │   └── index.html                      # Interactive Generative UI Dashboard (GitHub Pages)
 ├── charts/                             # Standalone publication-quality vector SVG charts
@@ -303,30 +268,20 @@ In real-world deployment, JEV should be deployed under an **Act vs. Escalate** p
 
 ---
 
-## 7. How to Reproduce
+## 🚀 How to Reproduce
 
-### Prerequisites
-1. Python 3.10+
-2. Set API keys in `.env`:
-   ```bash
-   TYPESAFE_API_KEY="your-typesafe-key"
-   OPENROUTER_API_KEY="your-openrouter-key"
-   EXPERIENTIAL_API_KEY="your-experiential-key"
-   ```
-
-### Running Tests & Executing
 ```bash
-# Run automated offline test suite
+# 1. Run automated offline test suite
 python3 test_offline.py
 
-# Dry-run smoke test (no credits spent)
+# 2. Dry-run smoke test (no credits spent)
 python3 run_benchmark.py --plan smoke
 
-# Live execution across all 3 channels
+# 3. Live multi-channel execution
 python3 run_benchmark.py --plan evaluation --batch-size 400 --execute
 ```
 
 ---
 
-## License & Data Integrity Notice
+## 🔒 License & Data Integrity Notice
 To prevent pre-training benchmark contamination, private answer keys (`*_PRIVATE.csv`) are omitted from public releases. Results, question texts, and evaluation harnesses are open for academic and evaluation use.
