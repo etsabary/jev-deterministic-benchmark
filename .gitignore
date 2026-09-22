@@ -1,0 +1,34 @@
+# Environment variables and API keys
+.env
+.env.*
+*.env
+*.key
+*.pem
+
+# Private benchmark files (to prevent data contamination)
+*_PRIVATE.csv
+*_PRIVATE.jsonl
+*_PRIVATE.json
+*_PRIVATE*
+answer_key_PRIVATE.csv
+metadata_PRIVATE.csv
+specifications_PRIVATE.jsonl
+contrast_edits_PRIVATE.csv
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Intermediate runs & checkpoints
+runs/
+*.log
+.DS_Store
+
+# Benchmark source zip
+*.zip

@@ -1,0 +1,6 @@
+﻿reference_id,authors_or_publisher,title,publication,url,role_in_benchmark,checked_date
+S1,TypeSafe AI,Choice,Official documentation,https://docs.typesafe.ai/primitives/choice,Native request/response mapping; choice and option probability fields.,2026-09-22
+S2,TypeSafe AI,Confidence,Official documentation,https://docs.typesafe.ai/confidence,Provider confidence is a distribution-concentration statistic; preserve it separately from option probability.,2026-09-22
+S3,Marco Tulio Ribeiro; Tongshuang Wu; Carlos Guestrin; Sameer Singh,Beyond Accuracy: Behavioral Testing of NLP Models with CheckList,"ACL 2020, pp. 4902-4912",https://aclanthology.org/2020.acl-main.442/,"Motivates capability coverage, invariance tests, and behavioral diagnosis beyond aggregate accuracy.",2026-09-22
+S4,Pouya Pezeshkpour; Estevam Hruschka,Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions,"arXiv:2308.11483, 2023",https://arxiv.org/abs/2308.11483,Motivates testing option-order sensitivity; does not establish JEV behavior.,2026-09-22
+S5,Chuan Guo; Geoff Pleiss; Yu Sun; Kilian Q. Weinberger,On Calibration of Modern Neural Networks,"arXiv:1706.04599, 2017",https://arxiv.org/abs/1706.04599,Motivates evaluating predicted probability against empirical correctness.,2026-09-22

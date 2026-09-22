@@ -1,0 +1,28 @@
+﻿field,requiredness,type_or_units,meaning,native_mapping_or_source
+run_id,Required,text,One identifier for one fixed provider/model/request condition.,Set by your runner.
+item_id,Required,text,Original benchmark ID; do not change it.,Copied from input.
+repeat_index,Required,integer >= 1,First presentation is 1. Optional identical repetitions are 2 and 3.,Copied from run plan.
+selected_option,Required on success,integer 1-5,Selected original dataset option; blank on request failure.,answers.decision.choice
+probability_1,Strongly recommended,number 0-1,Probability of original option 1. Keep full returned precision; leave blank if absent.,"answers.decision.probabilities[""1""]"
+probability_2,Strongly recommended,number 0-1,Probability of original option 2. Keep full returned precision; leave blank if absent.,"answers.decision.probabilities[""2""]"
+probability_3,Strongly recommended,number 0-1,Probability of original option 3. Keep full returned precision; leave blank if absent.,"answers.decision.probabilities[""3""]"
+probability_4,Strongly recommended,number 0-1,Probability of original option 4. Keep full returned precision; leave blank if absent.,"answers.decision.probabilities[""4""]"
+probability_5,Strongly recommended,number 0-1,Probability of original option 5. Keep full returned precision; leave blank if absent.,"answers.decision.probabilities[""5""]"
+reported_confidence,Strongly recommended,number 0-1,Provider confidence statistic; not the selected-option probability. Blank if unavailable.,answers.decision.confidence
+status,Required,ok | error | timeout | invalid_response,One final status per item/repeat.,Set by your runner.
+provider,Strongly recommended,text,Actual inference provider.,Set by your runner.
+model_requested,Strongly recommended,text,"Exact model ID sent, preferably a pinned snapshot.",Request model field.
+model_returned,Strongly recommended,text,Actual model identifier returned; record alias resolution or version.,Response model field.
+prompt_mode,Strongly recommended,text,Use native_choice for the supplied mapping; label adapters separately.,Set by your runner.
+settings_json,Recommended,JSON object as CSV string,"Explicit request settings, caching/retry policy when known; record unknown defaults as unknown.",Set by your runner.
+timestamp_utc,Recommended,ISO 8601 UTC timestamp,Record consistently at start or end of the request.,Set by your runner.
+latency_ms,Recommended,nonnegative milliseconds,Measured latency; document whether retries are included.,Measured by your runner.
+input_tokens,Optional,nonnegative integer,Actual provider-reported usage; blank if absent.,usage.input_tokens when provided.
+output_tokens,Optional,nonnegative integer,Actual provider-reported usage; blank if absent.,usage.output_tokens when provided.
+http_status,Recommended,HTTP status integer,HTTP response status; blank for no received response.,HTTP response.
+attempt_count,Recommended,integer >= 1,Number of transport attempts for this final item/repeat row.,Set by your runner.
+api_request_id,Optional,text,Provider request ID for audit or troubleshooting.,Response body or headers when provided.
+prompt_sha256,Required for integrity,SHA-256 hexadecimal,Copy original dataset content hash; do not recompute over altered content and keep the original ID.,Copied from input.
+request_payload_sha256,Recommended,SHA-256 hexadecimal,"Actual sent request body hash, with canonicalization documented; excludes credentials.",Computed by your runner.
+error_message,Required on failure,text,"Transport, response, or parsing error; preserve details without secrets.",Set by your runner.
+raw_response_json,Strongly recommended,JSON as CSV string,"Full original response; no authorization headers, API keys, or credentials.",Original API response.

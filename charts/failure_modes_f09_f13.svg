@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430">
+<rect width="880" height="430" fill="#0f172a" rx="12"/>
+<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Anatomy of Signature Failure Modes (1,000 Decisions)</text>
+<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Empirical distractor choices vs. random chance baselines</text>
+<rect x="50" y="95" width="370" height="305" fill="#1e293b" rx="8" stroke="#334155"/>
+<text x="66" y="123" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">F13: Sequential Procedures (13.2% All / 7.7% Core)</text>
+<text x="66" y="141" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Stale Intermediate-State Trap (33 errors analyzed)</text>
+<text x="66" y="177" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Chose Earlier Valid Sequence State</text>
+<rect x="66" y="187" width="335" height="14" fill="#0f172a" rx="3"/>
+<rect x="66" y="187" width="274.03" height="14" fill="#f43f5e" rx="3"/>
+<text x="334.03" y="198" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="end">81.8% (27/33)</text>
+<text x="66" y="214" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Random baseline expectation: ~57.5% (19/33)</text>
+<text x="66" y="240" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Contrast: Planning with Preconditions</text>
+<rect x="66" y="250" width="335" height="14" fill="#0f172a" rx="3"/>
+<rect x="66" y="250" width="315.23499999999996" height="14" fill="#10b981" rx="3"/>
+<text x="375.23499999999996" y="261" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="end">94.1% Accuracy</text>
+<rect x="66" y="285" width="335" height="95" fill="#0f172a" rx="6" stroke="#475569"/>
+<text x="76" y="305" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Diagnosis: Temporal State Mutation Failure</text>
+<text x="76" y="322" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">JEV easily handles static multi-step relationships,</text>
+<text x="76" y="337" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">but repeatedly mutating and updating state across</text>
+<text x="76" y="352" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">time collapses to earlier visited intermediate states.</text>
+<text x="76" y="369" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Core accuracy: only 2 / 26 correct (7.7%).</text>
+<rect x="460" y="95" width="370" height="305" fill="#1e293b" rx="8" stroke="#334155"/>
+<text x="476" y="123" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">F09: Exact Truth Counting (33.3% All / 43.5% Core)</text>
+<text x="476" y="141" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Compatibility Maximization Bias (25 errors analyzed)</text>
+<text x="476" y="177" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Chose Candidate with MORE Truths Than Required</text>
+<rect x="476" y="187" width="335" height="14" fill="#0f172a" rx="3"/>
+<rect x="476" y="187" width="281.4" height="14" fill="#f43f5e" rx="3"/>
+<text x="751.4" y="198" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="end">84.0% (21/25)</text>
+<text x="476" y="214" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Random baseline expectation: ~60.0% (15/25)</text>
+<text x="476" y="240" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Chose Candidate with MAXIMUM Truths Available</text>
+<rect x="476" y="250" width="335" height="14" fill="#0f172a" rx="3"/>
+<rect x="476" y="250" width="214.4" height="14" fill="#f59e0b" rx="3"/>
+<text x="684.4" y="261" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="end">64.0% (16/25)</text>
+<text x="476" y="276" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Random baseline expectation: ~28.0% (7/25)</text>
+<rect x="476" y="285" width="335" height="95" fill="#0f172a" rx="6" stroke="#475569"/>
+<text x="486" y="305" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Key Breakthrough: Cardinality vs "Exactly"</text>
+<text x="486" y="322" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Boolean scope (97.7%) handles "exactly one" easily.</text>
+<text x="486" y="337" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Failure is in cardinality accumulation across items.</text>
+<text x="486" y="352" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">On candidate probes with zero search, JEV scored</text>
+<text x="486" y="369" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">0 / 5 (0.0%). The counting operation itself fails.</text>
+</svg>

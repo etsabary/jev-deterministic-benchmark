@@ -1,0 +1,26 @@
+﻿family_id,family,target_ability,level_definition
+F01,Record lookup and filtering,Read all required attributes; bind the right record.,Relevant filter fields: one to four.
+F02,Forward conditional reasoning,Follow implications without reversing them.,"Required implication-chain length: one, two, four, six."
+F03,Necessary conditions and contraposition,Use a failed necessary condition; avoid denying the antecedent.,"Required implication-chain length: one, two, four, six."
+F04,Boolean scope and exclusivity,"Distinguish all, at least one, exactly one, and grouped conditions.",One condition; conjunction/disjunction; exclusivity; nested scope.
+F05,Quantifiers and set relations,"Separate all, none, some, and existence.",Two to five premises over an explicitly finite universe.
+F06,Transitive comparisons,Integrate a comparison tree and preserve direction.,Longest relevant comparison path: one to four links.
+F07,Scheduling constraints,"Propagate adjacency, exclusions, and before/after constraints.",Two to five individually necessary clues for the queried day.
+F08,One-to-one assignments,Use exclusivity and elimination across assignments.,Two to five individually necessary clues for the queried assignment.
+F09,Exact truth counting,Check all statements against candidate worlds.,"Four, five, six, eight inscriptions."
+F10,Truth-teller consistency,Make every speaker type agree with that speaker's statement.,Four to seven speakers.
+F11,Sufficiency and inconsistency,"Distinguish a unique answer, multiple answers, and no possible world.","Two to five clues; intended load, not a calibrated difficulty scale."
+F12,Object tracking through swaps,Update object locations; avoid stale or last-mentioned locations.,"Two, four, six, eight swaps."
+F13,Sequential procedure execution,Apply ordered edits to a changing list.,"Two, four, six, eight operations."
+F14,Temporal interval relations,Relate starts and finishes through ordered landmarks.,Zero to three intervening temporal markers.
+F15,Verbal spatial tracking,Track orientation and displacement using stated movement rules.,"Two, four, six, eight movement commands."
+F16,Nested role and reference binding,Resolve nested mentor/helper relationships from the inside out.,One to four nested role lookups.
+F17,Perspective and belief tracking,Separate observed reality from first- and second-order beliefs.,"Two, four, six, eight events; belief order is separately recorded."
+F18,Deterministic causal intervention,"Override an intervened signal, preserve upstream state, recompute downstream.",One to four intermediate gates plus three outputs.
+F19,Exceptions and priority rules,"Use the highest-priority applicable rule, not any matching rule.",Three to six ordered rules including a fallback.
+F20,Planning with preconditions,Choose the first action on a shortest feasible plan.,Verified minimum solution length: one to four actions.
+F21,Directed reachability,Respect one-way links and closed locations.,Shortest permitted route: one to four links.
+F22,Deterministic preference ordering,Apply explicit lexicographic priorities and tie-breaks.,One to four ordered criteria; the final tie needs the last priority.
+F23,Rule verification and counterexamples,Find the candidate case that violates a stated rule.,One to four rules; five complete candidate records.
+F24,Source authority and stale records,Use authorized current evidence; treat quoted instructions as data.,"Three, five, seven, nine records, plus an untrusted note."
+F25,Deterministic fault diagnosis,Combine probe outcomes to identify the only compatible fault.,Two to five probes; all fault effects are specified.

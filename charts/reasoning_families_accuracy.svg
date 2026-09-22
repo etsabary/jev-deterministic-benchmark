@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 860" width="960" height="860">
+<rect width="960" height="860" fill="#0f172a" rx="12"/>
+<text x="40" y="45" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold">JEV Decision Benchmark: Capability Across Reasoning Families</text>
+<text x="40" y="70" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Sample: 1,000 decisions (817/1,000 = 81.7% overall) | Solid: All Items | Marker: Core Items</text>
+<line x1="310.0" y1="85" x2="310.0" y2="800" stroke="#334155" stroke-dasharray="3,3" stroke-width="1"/>
+<text x="310.0" y="80" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">0%</text>
+<line x1="425.0" y1="85" x2="425.0" y2="800" stroke="#334155" stroke-dasharray="3,3" stroke-width="1"/>
+<text x="425.0" y="80" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">25%</text>
+<line x1="540.0" y1="85" x2="540.0" y2="800" stroke="#334155" stroke-dasharray="3,3" stroke-width="1"/>
+<text x="540.0" y="80" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">50%</text>
+<line x1="655.0" y1="85" x2="655.0" y2="800" stroke="#334155" stroke-dasharray="3,3" stroke-width="1"/>
+<text x="655.0" y="80" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">75%</text>
+<line x1="770.0" y1="85" x2="770.0" y2="800" stroke="#334155" stroke-dasharray="3,3" stroke-width="1"/>
+<text x="770.0" y="80" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">100%</text>
+<text x="295" y="116" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Record lookup / filtering</text>
+<rect x="310" y="104" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="104" width="460.0" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="102" x2="770.0" y2="122" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="116" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">100%</text>
+<text x="832" y="116" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="144" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Forward conditional reasoning</text>
+<rect x="310" y="132" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="132" width="460.0" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="130" x2="770.0" y2="150" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="144" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">100%</text>
+<text x="832" y="144" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="172" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Transitive comparisons</text>
+<rect x="310" y="160" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="160" width="460.0" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="158" x2="770.0" y2="178" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="172" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">100%</text>
+<text x="832" y="172" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="200" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Directed reachability</text>
+<rect x="310" y="188" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="188" width="460.0" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="186" x2="770.0" y2="206" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="200" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">100%</text>
+<text x="832" y="200" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="228" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Source authority / stale records</text>
+<rect x="310" y="216" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="216" width="460.0" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="214" x2="770.0" y2="234" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="228" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">100%</text>
+<text x="832" y="228" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="256" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Boolean scope / exclusivity</text>
+<rect x="310" y="244" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="244" width="449.42" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="242" x2="770.0" y2="262" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.7%</text>
+<text x="832" y="256" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="284" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Necessary conditions / contraposition</text>
+<rect x="310" y="272" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="272" width="448.96" height="16" fill="#10b981" rx="4"/>
+<line x1="754.36" y1="270" x2="754.36" y2="290" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="284" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.6%</text>
+<text x="832" y="284" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 96.6%</text>
+<text x="295" y="312" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Quantifiers / set relations</text>
+<rect x="310" y="300" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="300" width="448.96" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="298" x2="770.0" y2="318" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="312" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.6%</text>
+<text x="832" y="312" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="340" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Preference ordering</text>
+<rect x="310" y="328" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="328" width="448.96" height="16" fill="#10b981" rx="4"/>
+<line x1="770.0" y1="326" x2="770.0" y2="346" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="340" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.6%</text>
+<text x="832" y="340" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 100%</text>
+<text x="295" y="368" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Fault diagnosis</text>
+<rect x="310" y="356" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="356" width="448.96" height="16" fill="#10b981" rx="4"/>
+<line x1="751.5999999999999" y1="354" x2="751.5999999999999" y2="374" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="368" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.6%</text>
+<text x="832" y="368" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 96.0%</text>
+<text x="295" y="396" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Rule verification / counterexamples</text>
+<rect x="310" y="384" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="384" width="449.42" height="16" fill="#10b981" rx="4"/>
+<line x1="754.82" y1="382" x2="754.82" y2="402" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="396" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.7%</text>
+<text x="832" y="396" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 96.7%</text>
+<text x="295" y="424" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Temporal interval relations</text>
+<rect x="310" y="412" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="412" width="446.2" height="16" fill="#10b981" rx="4"/>
+<line x1="750.22" y1="410" x2="750.22" y2="430" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="424" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">97.0%</text>
+<text x="832" y="424" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 95.7%</text>
+<text x="295" y="452" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Planning with preconditions</text>
+<rect x="310" y="440" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="440" width="432.85999999999996" height="16" fill="#10b981" rx="4"/>
+<line x1="745.62" y1="438" x2="745.62" y2="458" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="452" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">94.1%</text>
+<text x="832" y="452" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 94.7%</text>
+<text x="295" y="480" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Exceptions / priority rules</text>
+<rect x="310" y="468" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="468" width="422.28" height="16" fill="#10b981" rx="4"/>
+<line x1="728.14" y1="466" x2="728.14" y2="486" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="480" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">91.8%</text>
+<text x="832" y="480" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 90.9%</text>
+<text x="295" y="508" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Perspective / belief tracking</text>
+<rect x="310" y="496" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="496" width="403.88" height="16" fill="#38bdf8" rx="4"/>
+<line x1="718.94" y1="494" x2="718.94" y2="514" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="508" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">87.8%</text>
+<text x="832" y="508" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 88.9%</text>
+<text x="295" y="536" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">One-to-one assignments</text>
+<rect x="310" y="524" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="524" width="386.86" height="16" fill="#38bdf8" rx="4"/>
+<line x1="724.0" y1="522" x2="724.0" y2="542" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="536" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">84.1%</text>
+<text x="832" y="536" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 90.0%</text>
+<text x="295" y="564" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Causal intervention</text>
+<rect x="310" y="552" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="552" width="370.3" height="16" fill="#38bdf8" rx="4"/>
+<line x1="674.3199999999999" y1="550" x2="674.3199999999999" y2="570" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="564" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">80.5%</text>
+<text x="832" y="564" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 79.2%</text>
+<text x="295" y="592" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Sufficiency / inconsistency</text>
+<rect x="310" y="580" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="580" width="365.24" height="16" fill="#38bdf8" rx="4"/>
+<line x1="721.7" y1="578" x2="721.7" y2="598" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="592" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">79.4%</text>
+<text x="832" y="592" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 89.5%</text>
+<text x="295" y="620" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Nested reference binding</text>
+<rect x="310" y="608" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="608" width="347.75999999999993" height="16" fill="#38bdf8" rx="4"/>
+<line x1="605.78" y1="606" x2="605.78" y2="626" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="620" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">75.6%</text>
+<text x="832" y="620" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 64.3%</text>
+<text x="295" y="648" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Scheduling</text>
+<rect x="310" y="636" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="636" width="309.58" height="16" fill="#f59e0b" rx="4"/>
+<line x1="638.44" y1="634" x2="638.44" y2="654" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="648" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">67.3%</text>
+<text x="832" y="648" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 71.4%</text>
+<text x="295" y="676" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Object tracking through swaps</text>
+<rect x="310" y="664" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="664" width="282.44" height="16" fill="#f97316" rx="4"/>
+<line x1="595.6600000000001" y1="662" x2="595.6600000000001" y2="682" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="676" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">61.4%</text>
+<text x="832" y="676" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 62.1%</text>
+<text x="295" y="704" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Truth-teller consistency</text>
+<rect x="310" y="692" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="692" width="273.7" height="16" fill="#f97316" rx="4"/>
+<line x1="572.6600000000001" y1="690" x2="572.6600000000001" y2="710" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="704" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">59.5%</text>
+<text x="832" y="704" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 57.1%</text>
+<text x="295" y="732" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Spatial tracking</text>
+<rect x="310" y="720" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="720" width="241.5" height="16" fill="#f97316" rx="4"/>
+<line x1="590.14" y1="718" x2="590.14" y2="738" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="732" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">52.5%</text>
+<text x="832" y="732" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 60.9%</text>
+<text x="295" y="760" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Exact truth counting (F09)</text>
+<rect x="310" y="748" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="748" width="153.17999999999998" height="16" fill="#f43f5e" rx="4"/>
+<line x1="510.1" y1="746" x2="510.1" y2="766" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="760" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">33.3%</text>
+<text x="832" y="760" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 43.5%</text>
+<text x="295" y="788" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500" text-anchor="end">Sequential procedures (F13)</text>
+<rect x="310" y="776" width="460" height="16" fill="#1e293b" rx="4"/>
+<rect x="310" y="776" width="60.720000000000006" height="16" fill="#f43f5e" rx="4"/>
+<line x1="345.42" y1="774" x2="345.42" y2="794" stroke="#ffffff" stroke-width="2.5"/>
+<text x="782" y="788" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">13.2%</text>
+<text x="832" y="788" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Core: 7.7%</text>
+<rect x="80" y="825" width="12" height="12" fill="#10b981" rx="3"/>
+<text x="100" y="835" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Very Strong (90-100%)</text>
+<rect x="260" y="825" width="12" height="12" fill="#38bdf8" rx="3"/>
+<text x="280" y="835" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Moderate (75-90%)</text>
+<rect x="420" y="825" width="12" height="12" fill="#f97316" rx="3"/>
+<text x="440" y="835" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Weak (50-75%)</text>
+<rect x="560" y="825" width="12" height="12" fill="#f43f5e" rx="3"/>
+<text x="580" y="835" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Extremely Weak (&lt;35%)</text>
+<line x1="740" y1="825" x2="740" y2="837" stroke="#ffffff" stroke-width="2.5"/>
+<text x="750" y="835" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Core Benchmark Marker</text>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "benchmark_version": "JEV-DD-1.0",
+  "total_items_verified": 3180,
+  "core_items_verified": 2000,
+  "unique_prompts": 3180,
+  "exactly_five_distinct_options_each": true,
+  "gold_keys_recomputed": true,
+  "payload_hashes_verified": true,
+  "all_100_contrasts_changed_one_task_component": true,
+  "all_contrast_answers_change": true,
+  "core_keys_balanced_within_each_family_and_level": true,
+  "each_split_position_balanced_as_closely_as_possible_within_family_and_level": true,
+  "all_five_answer_positions_covered_per_rotation_anchor": true,
+  "auxiliary_cross_checks": {
+    "boolean_enumeration_vs_propagation": 168,
+    "swap_forward_vs_inverse": 84,
+    "interval_relation_partition": 84,
+    "causal_override_changes_output_and_includes_no_override_foil": 80,
+    "planning_forward_vs_reverse": 84
+  },
+  "runtime_seconds": 0.58,
+  "limitations": [
+    "Natural-language renderers and primary solvers share the same specification; this is not an independent human audit of every sentence.",
+    "Engineered levels are not empirically calibrated difficulty scores.",
+    "No JEV inference has been run by this validation."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "software_self_tests_only": true,
+  "actual_jev_calls": 0,
+  "tests": [
+    "perfect synthetic oracle",
+    "uniform probabilities with constant choice",
+    "invalid and failed responses",
+    "identical-input repeats",
+    "duplicate rejection",
+    "prompt hash rejection",
+    "unknown item rejection",
+    "mixed-model rejection"
+  ],
+  "passed": true
+}

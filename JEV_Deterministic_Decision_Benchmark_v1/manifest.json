@@ -1,0 +1,29 @@
+{
+  "benchmark_version": "JEV-DD-1.0",
+  "seed": 20260922,
+  "created_date": "2026-09-22",
+  "instances_per_family_level": 20,
+  "total_items": 3180,
+  "counts_by_role": {
+    "core": 2000,
+    "robustness": 1000,
+    "contrast": 100,
+    "probe": 80
+  },
+  "families": 25,
+  "levels_per_family": 4,
+  "anchor_base_cases": 100,
+  "core_answer_positions": {
+    "2": 400,
+    "3": 400,
+    "4": 400,
+    "5": 400,
+    "1": 400
+  },
+  "development_core": 400,
+  "evaluation_core": 1600,
+  "min_words": 84,
+  "max_words": 673,
+  "runtime_seconds": 22.47,
+  "actual_model_runs": 0
+}
