@@ -1,8 +1,22 @@
-# JEV Deterministic Decision Benchmark
+# Jev 1.13 — Deterministic Decision Benchmark
 
 I wanted to understand what kinds of decisions Jev actually makes well.
 
-I tested `jev-latest` (snapshot `jev-1.13.0`) on 1,000 deterministic decisions across 25 reasoning families on the `JEV-DD-1.0` benchmark. The overall accuracy was 81.7%, but the average hides a much more interesting pattern.
+On **22 September 2026**, I tested the **Jev 1.13 release** on 1,000 deterministic decisions across 25 reasoning families on the `JEV-DD-1.0` benchmark. Requests used `jev-latest`; the version details recorded by each provider are below. The overall accuracy was 81.7%, but the average hides a much more interesting pattern.
+
+## Model version and run provenance
+
+The published results pool three provider routes. Every request named `jev-latest`, and the [raw results](data/results_1000_eval.csv) preserve both `model_requested` and `model_returned`:
+
+| Provider | Returned model ID | Decisions |
+| --- | --- | ---: |
+| TypeSafe | `jev-1.13.0` | 412 |
+| OpenRouter | `typesafe/jev-1.13-20260917` | 332 |
+| Experiential | `jev-latest` | 256 |
+
+TypeSafe explicitly identified snapshot `jev-1.13.0`; OpenRouter returned its dated Jev 1.13 ID. Experiential returned only the alias, so the exact snapshot behind those 256 responses cannot be independently established from this export. The aggregate scores include those alias-only responses.
+
+**These figures describe this recorded September 22 run.** `jev-latest` is a moving alias; a later model release needs a separate evaluation. `JEV-DD-1.0` is the benchmark version, while Jev 1.13 is the model release evaluated here. Future comparisons should pin a versioned model ID where supported and retain the actual returned ID for every response.
 
 ---
 

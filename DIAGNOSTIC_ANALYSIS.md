@@ -1,6 +1,10 @@
-# JEV Behavioral & Diagnostic Analysis Log
+# Jev 1.13 Behavioral & Diagnostic Analysis Log
 
-This document tracks the cumulative behavioral fingerprint, failure mode analysis, calibration profile, and architectural hypotheses of the JEV model (`jev-latest` / `jev-1.13.0`) across stepped benchmark evaluations.
+This document tracks the cumulative behavioral fingerprint, failure mode analysis, calibration profile, and architectural hypotheses of the **Jev 1.13 evaluation run on 22 September 2026** across 1,000 decisions on benchmark `JEV-DD-1.0`.
+
+All requests used `jev-latest`. Recorded responses identify `jev-1.13.0` for 412 TypeSafe decisions and `typesafe/jev-1.13-20260917` for 332 OpenRouter decisions. The remaining 256 Experiential responses report only `jev-latest`, so their exact snapshot cannot be independently established from the export. The aggregate results below include all three routes. See [model version and run provenance](README.md#model-version-and-run-provenance) and the [raw results](data/results_1000_eval.csv).
+
+These findings apply to this recorded run. A later release behind the moving `jev-latest` alias requires a separate evaluation; `JEV-DD-1.0` identifies the benchmark version.
 
 ---
 

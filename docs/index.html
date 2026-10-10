@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JEV Benchmark Diagnostic Visualizations (1,000 Decisions)</title>
+  <title>Jev 1.13 Benchmark Results — 22 September 2026 (1,000 Decisions)</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
     :root {
@@ -32,15 +32,16 @@
   <!-- Header -->
   <header class="border-b border-slate-700 pb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div>
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <span class="px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-sky-500/20 text-sky-400 border border-sky-500/30">
           Evaluation Report (1,000 Milestone)
         </span>
-        <span class="text-xs text-slate-400">Model: <code class="text-slate-200">jev-latest (v1.13.0)</code></span>
+        <span class="text-xs text-slate-400">Model release: <strong class="text-slate-200">Jev 1.13</strong></span>
+        <span class="text-xs text-slate-400">Run: <strong>22 September 2026</strong></span>
         <span class="text-xs text-slate-400">Sample: <strong>1,000 Decisions</strong></span>
       </div>
       <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white mt-2">
-        JEV Deterministic Decision Benchmark (JEV-DD-1.0)
+        Jev 1.13 Deterministic Decision Benchmark (JEV-DD-1.0)
       </h1>
       <p class="text-slate-400 text-sm mt-1">
         Comprehensive diagnostic profile across 25 reasoning families, confidence calibration, and error mechanics.
@@ -61,6 +62,33 @@
       </button>
     </div>
   </header>
+
+  <section aria-labelledby="model-provenance" class="bg-slate-800/70 border border-slate-700 rounded-xl p-6 space-y-3">
+    <h2 id="model-provenance" class="text-lg font-semibold text-white">Model version and run provenance</h2>
+    <p class="text-sm text-slate-300">
+      All 1,000 requests used <code>jev-latest</code>. These results pool three provider routes, whose recorded response IDs are shown below.
+      <code>JEV-DD-1.0</code> identifies the benchmark version; Jev 1.13 identifies the evaluated model release.
+    </p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="text-slate-400">
+          <tr><th scope="col" class="py-2 pr-4">Provider</th><th scope="col" class="py-2 pr-4">Returned model ID</th><th scope="col" class="py-2 text-right">Decisions</th></tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-700"><th scope="row" class="py-2 pr-4 font-medium">TypeSafe</th><td class="py-2 pr-4"><code>jev-1.13.0</code></td><td class="py-2 text-right">412</td></tr>
+          <tr class="border-t border-slate-700"><th scope="row" class="py-2 pr-4 font-medium">OpenRouter</th><td class="py-2 pr-4"><code>typesafe/jev-1.13-20260917</code></td><td class="py-2 text-right">332</td></tr>
+          <tr class="border-t border-slate-700"><th scope="row" class="py-2 pr-4 font-medium">Experiential</th><td class="py-2 pr-4"><code>jev-latest</code></td><td class="py-2 text-right">256</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-slate-400">
+      TypeSafe explicitly identified snapshot <code>jev-1.13.0</code>; OpenRouter returned its dated Jev 1.13 ID.
+      Experiential reported only the alias, so the exact snapshot behind its 256 responses cannot be independently established from this export.
+      The aggregate scores include those responses. These figures describe the recorded September 22 run; a later release behind <code>jev-latest</code> needs a separate evaluation.
+      <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/data/results_1000_eval.csv" class="text-sky-400 underline">Raw results</a>
+      · <a href="https://github.com/etsabary/jev-deterministic-benchmark#model-version-and-run-provenance" class="text-sky-400 underline">Full report</a>
+    </p>
+  </section>
 
   <!-- Key Metrics Row -->
   <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430">
 <rect width="880" height="430" fill="#0f172a" rx="12"/>
-<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Anatomy of Signature Failure Modes (1,000 Decisions)</text>
+<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Failure Modes (1,000 Decisions)</text>
 <text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Empirical distractor choices vs. random chance baselines</text>
 <rect x="50" y="95" width="370" height="305" fill="#1e293b" rx="8" stroke="#334155"/>
 <text x="66" y="123" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">F13: Sequential Procedures (13.2% All / 7.7% Core)</text>

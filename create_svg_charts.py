@@ -50,7 +50,7 @@ def generate_families_svg():
     svg.append(f'<rect width="{width}" height="{height}" fill="#0f172a" rx="12"/>')
     
     # Title & Header
-    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold">JEV Decision Benchmark: Capability Across Reasoning Families</text>')
+    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold">Jev 1.13: Capability Across Reasoning Families</text>')
     svg.append('<text x="40" y="70" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Sample: 1,000 decisions (817/1,000 = 81.7% overall) | Solid: All Items | Marker: Core Items</text>')
     
     # Grid lines
@@ -106,7 +106,7 @@ def generate_calibration_svg():
     svg.append(f'<rect width="{width}" height="{height}" fill="#0f172a" rx="12"/>')
     
     # Title
-    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Confidence Calibration & Operational Selectivity (1,000 Decisions)</text>')
+    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Confidence Calibration (1,000 Decisions)</text>')
     svg.append('<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Empirical accuracy at cumulative confidence thresholds | ROC AUC ≈ 0.93</text>')
 
     # Graph Area
@@ -179,7 +179,7 @@ def generate_failure_anatomy_svg():
     svg.append(f'<rect width="{width}" height="{height}" fill="#0f172a" rx="12"/>')
     
     # Title
-    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Anatomy of Signature Failure Modes (1,000 Decisions)</text>')
+    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Failure Modes (1,000 Decisions)</text>')
     svg.append('<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Empirical distractor choices vs. random chance baselines</text>')
 
     # Column 1: F13 Sequential Procedures
@@ -251,7 +251,7 @@ def generate_option_balance_svg():
     svg.append(f'<rect width="{width}" height="{height}" fill="#0f172a" rx="12"/>')
     
     # Title
-    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Positional Balance & Semantic Consistency (1,000 Decisions)</text>')
+    svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Positional Balance (1,000 Decisions)</text>')
     svg.append('<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Evaluation across 1,000 decisions demonstrates zero positional selection bias</text>')
 
     # 5 Option Columns
