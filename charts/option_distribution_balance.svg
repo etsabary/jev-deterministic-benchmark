@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 360" width="750" height="360">
 <rect width="750" height="360" fill="#0f172a" rx="12"/>
 <text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Positional Balance (1,000 Decisions)</text>
-<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Evaluation across 1,000 decisions demonstrates zero positional selection bias</text>
+<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Balanced overall counts; matched rotations are needed to test position sensitivity</text>
 <line x1="70" y1="166.66666666666669" x2="450" y2="166.66666666666669" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5"/>
 <text x="458" y="170.66666666666669" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Expected 20.0% (200)</text>
 <rect x="70" y="163.86666666666667" width="56" height="96.13333333333334" fill="#38bdf8" rx="4"/>

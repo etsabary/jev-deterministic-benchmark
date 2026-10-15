@@ -176,13 +176,15 @@ Nominal difficulty degrades gracefully, but task architecture completely dominat
 | **Level 3** | **76.8%** | **78.7%** |
 | **Level 4** | **70.2%** | **74.2%** |
 
-### Positional Balance (Zero Slot Bias)
+### Positional selection balance
 Across 1,000 decisions, option selection is virtually perfectly uniform (target = 200 / 20.0%):
 * **Option 1**: 206 (20.6%)
 * **Option 2**: 201 (20.1%)
 * **Option 3**: 188 (18.8%)
 * **Option 4**: 198 (19.8%)
 * **Option 5**: 207 (20.7%)
+
+These marginal counts do not establish zero sensitivity to answer position. The [October 14 extension](extension_136/README.md) completes 25 five-position panels: Jev gives the same semantic choice in 22 and changes it in three. It gets all five rotations correct in 21. The extended report also compares Jev 1.13 with GPT-6 Luna Decisions on 1,136 frozen questions and separates candidate verification, changed evidence, confidence coverage and a 256-item repeatability recheck.
 
 ---
 

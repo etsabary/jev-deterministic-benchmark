@@ -252,7 +252,7 @@ def generate_option_balance_svg():
     
     # Title
     svg.append('<text x="40" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Jev 1.13: Positional Balance (1,000 Decisions)</text>')
-    svg.append('<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Evaluation across 1,000 decisions demonstrates zero positional selection bias</text>')
+    svg.append('<text x="40" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Balanced overall counts; matched rotations are needed to test position sensitivity</text>')
 
     # 5 Option Columns
     options = [

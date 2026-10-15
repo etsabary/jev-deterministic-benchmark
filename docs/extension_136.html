@@ -1,0 +1,432 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jev 1.13 vs GPT-6 Luna Decisions: expanded 1,136-question reference</title>
+<style>
+body{max-width:1100px;margin:0 auto;padding:38px 24px 80px;background:#f7f9fc;color:#172c42;font:17px/1.65 system-ui,sans-serif}
+h1{font-size:2.2rem;line-height:1.2}h2{margin-top:2.4rem;line-height:1.3}h3{margin-top:2rem}a{color:#087f8c}img{max-width:100%;height:auto;border-radius:12px}
+table{display:block;overflow-x:auto;border-collapse:collapse;max-width:100%;font-size:.9rem}th,td{padding:10px 13px;border-bottom:1px solid #d5dfe9;text-align:left}th{background:#e7eef5}code{font-size:.86em;overflow-wrap:anywhere}nav{font-size:.9rem;border-bottom:1px solid #d5dfe9;padding-bottom:16px;margin-bottom:32px}p,li{max-width:95ch}
+</style><nav><a href="index.html">Original 1,000-question dashboard</a> · <a href="https://github.com/etsabary/luna-decisions-benchmark">Comparison repository and reproduction</a></nav><main>
+<h1>Jev 1.13 vs Luna Decisions: 136-question diagnostic extension</h1>
+<p>14 October 2026. This extends the original 1,000-question comparison to a frozen <strong>1,136-question reference</strong>. It adds complete matched tests rather than another random sample. The original 1,000 responses and their published scores remain unchanged. No Jev 1.14 results enter this reference.</p>
+<h2>New results</h2>
+<table>
+<thead>
+<tr>
+<th>Additional questions</th>
+<th style="text-align: right;">Jev 1.13</th>
+<th style="text-align: right;">Luna Decisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attempted</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">136</td>
+</tr>
+<tr>
+<td>Valid choices</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">130</td>
+</tr>
+<tr>
+<td>Correct against the existing key</td>
+<td style="text-align: right;">93/136 (68.4%)</td>
+<td style="text-align: right;">75/136 (55.1%)</td>
+</tr>
+<tr>
+<td>Wrong valid choices</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr>
+<td>Unanswered</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Probability-format warnings</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>The extension is deliberately diagnostic, includes dependent questions and different task proportions, and must not be interpreted as an independent representative sample. In particular, its lower accuracy is not evidence of regression from the original scores.</p>
+<h2>What changes in the interpretation</h2>
+<p>The added questions reinforce the original distinction: Jev 1.13 is strong at applying stated rules to a supplied situation, while repeated state changes and exact counting remain weak. In the full reference, Jev answers all 37 lookup and all 37 directed-reachability questions correctly, but only 5/42 sequential-procedure questions. Luna also answers all lookup and reachability questions correctly, while scoring 9/42 on sequential procedures. These are observations on these generated questions, not guarantees for new tasks.</p>
+<p>The supplied-candidate checks make the weakness more specific. Jev gets 36/80 and Luna 32/80, even though the proposed arrangement or hypothetical location is supplied. Searching for a solution therefore cannot be the only difficulty: errors remain in checking constraints or counting their consequences. The small panel does not establish an internal mechanism.</p>
+<p>The rotation panels also qualify an earlier claim. Balanced overall option counts do not establish zero position sensitivity. Jev changes semantic choice in 3/25 fully answered panels; Luna changes in 6/21. Jev is more consistent here, but neither is invariant across all observed panels. On the 21 panels both fully answer, Jev gets every rotation correct in 18, compared with Luna's 14.</p>
+<p>Jev handles changed evidence more reliably in this selection: both answers are correct in 20/25 planned pairs, compared with Luna's 13/25. On the 22 pairs both answer, the comparison is 18/22 versus 13/22. This tests appropriate response to one edited fact, not general real-world adaptability.</p>
+<p>High confidence still selects a much stronger subset. Jev's confidence ≥0.95 group contains 543 correct decisions out of 544, covering 47.9% of the full reference. Luna's corresponding group contains 96/96, covering 8.5%. Luna's smaller error-free sample does not demonstrate a zero error rate; Jev's larger coverage does not eliminate its observed error. These thresholds were inspected on the evaluation results and need separate validation before operational use.</p>
+<p><img alt="Reasoning-family results and matched diagnostic panels" src="extension_136-assets/abilities_baseline.png" /></p>
+<h2>What the complete matched tests reveal</h2>
+<p>These panels combine retained historical responses with the new responses. They are diagnostic first-response comparisons across dates and, for historical Jev, across provider routes. They are not fresh same-session repeats.</p>
+<table>
+<thead>
+<tr>
+<th>Planned panel / outcome</th>
+<th style="text-align: right;">Jev 1.13</th>
+<th style="text-align: right;">Luna Decisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Five-position panels: all five answered / 25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr>
+<td>Five-position panels: all five correct / 25</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td>Same semantic choice across all five / complete panels</td>
+<td style="text-align: right;">22/25</td>
+<td style="text-align: right;">15/21</td>
+</tr>
+<tr>
+<td>Changed-evidence pairs: both answered / 25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td>Changed-evidence pairs: both correct / 25</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr>
+<td>Candidate checks correct / 80</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>Original parent puzzles correct / 16</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Parent plus all five candidate checks correct / 16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Semantic consistency aligns option meanings, not their displayed numbers. Consistent wrong answers are not successful solutions. Changing a choice after an evidence edit is also insufficient: getting both members correct is the stronger criterion. Refusals count as unanswered, not as demonstrated logical errors. The machine-readable summary also reports results restricted to panels fully answered by both models.</p>
+<h3>Supplied-candidate verification by task family</h3>
+<p>Each family has four parent puzzles and 20 candidate checks. Supplying a proposed arrangement reduces search, but checking or counting its constraints can still be difficult.</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th style="text-align: right;">Jev parent / 4</th>
+<th style="text-align: right;">Jev checks / 20</th>
+<th style="text-align: right;">Luna parent / 4</th>
+<th style="text-align: right;">Luna checks / 20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scheduling constraints</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>One-to-one assignments</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td>Exact truth counting</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Truth-teller consistency</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<h2>Frozen reference for future releases</h2>
+<table>
+<thead>
+<tr>
+<th>Existing-key score, descriptive only</th>
+<th style="text-align: right;">Jev 1.13</th>
+<th style="text-align: right;">Luna Decisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original 1,000 questions</td>
+<td style="text-align: right;">817/1,000 (81.7%)</td>
+<td style="text-align: right;">612/1,000 (61.2%)</td>
+</tr>
+<tr>
+<td>All 1,136 questions</td>
+<td style="text-align: right;">910/1,136 (80.1%)</td>
+<td style="text-align: right;">687/1,136 (60.5%)</td>
+</tr>
+<tr>
+<td>Unanswered across 1,136</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23</td>
+</tr>
+</tbody>
+</table>
+<p>The combined number mixes core questions and dependent diagnostic variants; it is a reproducible reference statistic, not a stronger estimate of general ability. Use matched per-family and per-panel outcomes to assess subsequent releases. The full original question text, instructions and option order are frozen in <code>questions_1136.csv</code>; <code>reference_manifest.json</code> binds the input and response hashes.</p>
+<h3>All 1,136 questions by reasoning family</h3>
+<p>These per-family totals also contain dependent variants. The JSON summary additionally separates roles and difficulty levels.</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Jev correct</th>
+<th style="text-align: right;">Luna correct</th>
+<th style="text-align: right;">Luna unanswered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean scope and exclusivity</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">47 (97.9%)</td>
+<td style="text-align: right;">33 (68.8%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Deterministic causal intervention</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">36 (81.8%)</td>
+<td style="text-align: right;">20 (45.5%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Deterministic fault diagnosis</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">43 (97.7%)</td>
+<td style="text-align: right;">33 (75.0%)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Deterministic preference ordering</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">44 (97.8%)</td>
+<td style="text-align: right;">44 (97.8%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Directed reachability</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">37 (100.0%)</td>
+<td style="text-align: right;">37 (100.0%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Exact truth counting</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">24 (36.9%)</td>
+<td style="text-align: right;">19 (29.2%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Exceptions and priority rules</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">48 (92.3%)</td>
+<td style="text-align: right;">45 (86.5%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Forward conditional reasoning</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">39 (100.0%)</td>
+<td style="text-align: right;">24 (61.5%)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Necessary conditions and contraposition</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">45 (97.8%)</td>
+<td style="text-align: right;">13 (28.3%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Nested role and reference binding</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">34 (77.3%)</td>
+<td style="text-align: right;">20 (45.5%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Object tracking through swaps</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">29 (63.0%)</td>
+<td style="text-align: right;">16 (34.8%)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>One-to-one assignments</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">49 (80.3%)</td>
+<td style="text-align: right;">35 (57.4%)</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td>Perspective and belief tracking</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">39 (88.6%)</td>
+<td style="text-align: right;">32 (72.7%)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Planning with preconditions</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">35 (94.6%)</td>
+<td style="text-align: right;">28 (75.7%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Quantifiers and set relations</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">42 (97.7%)</td>
+<td style="text-align: right;">38 (88.4%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Record lookup and filtering</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">37 (100.0%)</td>
+<td style="text-align: right;">37 (100.0%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Rule verification and counterexamples</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">45 (97.8%)</td>
+<td style="text-align: right;">36 (78.3%)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Scheduling constraints</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">43 (62.3%)</td>
+<td style="text-align: right;">25 (36.2%)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Sequential procedure execution</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">5 (11.9%)</td>
+<td style="text-align: right;">9 (21.4%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Source authority and stale records</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">37 (100.0%)</td>
+<td style="text-align: right;">31 (83.8%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Sufficiency and inconsistency</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">28 (80.0%)</td>
+<td style="text-align: right;">19 (54.3%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Temporal interval relations</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">35 (97.2%)</td>
+<td style="text-align: right;">19 (52.8%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Transitive comparisons</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">34 (100.0%)</td>
+<td style="text-align: right;">33 (97.1%)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Truth-teller consistency</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">31 (50.0%)</td>
+<td style="text-align: right;">20 (32.3%)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Verbal spatial tracking</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">24 (55.8%)</td>
+<td style="text-align: right;">21 (48.8%)</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<h3>Confidence-filtered reference outcomes</h3>
+<p>Exploratory cutoffs, not held-out production thresholds. Retained populations differ by model.</p>
+<table>
+<thead>
+<tr>
+<th>Confidence</th>
+<th style="text-align: right;">Jev retained</th>
+<th style="text-align: right;">Jev correct</th>
+<th style="text-align: right;">Luna retained</th>
+<th style="text-align: right;">Luna correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≥0.8</td>
+<td style="text-align: right;">696</td>
+<td style="text-align: right;">682 (98.0%)</td>
+<td style="text-align: right;">223</td>
+<td style="text-align: right;">220 (98.7%)</td>
+</tr>
+<tr>
+<td>≥0.9</td>
+<td style="text-align: right;">611</td>
+<td style="text-align: right;">607 (99.3%)</td>
+<td style="text-align: right;">142</td>
+<td style="text-align: right;">142 (100.0%)</td>
+</tr>
+<tr>
+<td>≥0.95</td>
+<td style="text-align: right;">544</td>
+<td style="text-align: right;">543 (99.8%)</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">96 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+<h2>Selection and execution</h2>
+<p>Exactly 68 additions complete all 16 parent-plus-five-check sets; 57 more complete one five-position rotation panel per family; 11 more complete at least one changed-evidence pair per family. The deterministic selection used item metadata and historical coverage, never gold answers or model successes. Ties used ascending IDs. Rotation anchors cover levels 1/2/3/4 in counts 11/5/4/5; this cost-minimizing extension is not level-balanced. All semantic inputs are the unchanged bank texts, with no demonstrations, tools, answer feedback or model-specific tuning.</p>
+<ul>
+<li><strong>Jev</strong>: requested <code>typesafe/jev-1.13</code>; all successful responses returned <code>typesafe/jev-1.13-20260917</code>. 136 HTTP attempts; 75,270 input / 7,072 output tokens; $0.00316134 reported cost. Valid-choice response-body median 154 ms; p95 245 ms.</li>
+<li><strong>Luna</strong>: requested <code>openai/gpt-6-luna-decisions</code>; all successful responses returned <code>openai/gpt-6-luna-decisions-20261006</code>. 142 HTTP attempts; 43,919 input / 0 output tokens; $0.00439190 reported cost. Valid-choice response-body median 237 ms; p95 714 ms.</li>
+</ul>
+<p>The runner retains one first response per item; retries only bounded transport/HTTP failures, at most twice. Luna's six new unanswered items each returned HTTP 502 refusals on both attempts. Those 12 attempts report no usage/cost, so their billed cost is unknown. All Jev requests explicitly used <code>typesafe/jev-1.13</code>, never <code>jev-latest</code>. Both model IDs are guarded against returned-version drift. Historical <code>jev-latest</code> responses are retained as the owner's September 22 Jev 1.13 run; 256 of their original response records contain only that alias.</p>
+<h3>Probability parsing disclosure</h3>
+<p>Three new Jev responses supply a valid choice and confidence but probabilities summing to 0.99. The strict runner recorded them as <code>invalid_response</code> and left its parsed choice blank. Raw records remain unchanged. The separate <code>decisions_jev_1136.csv</code> extracts those first typed choices, flags the distribution warning, and scores the choices against the existing key. This follows the original protocol's separation of choice accuracy from probability quality. No probabilities are renormalized, and none of these items was resampled. The same check flags ten pre-existing historical Jev distributions; their originally recorded choices and scores are unchanged.</p>
+<h2>Separate 256-question Jev 1.13 repeatability recheck</h2>
+<p>A supplementary recheck replayed the historical gateway's 256 alias-only items through the pinned OpenRouter Jev 1.13 route. All 256 returned <code>typesafe/jev-1.13-20260917</code>. Choices agreed on 248/256 (96.9%); eight changed. Accuracy changed from 213/256 (83.2%) to 211/256 (82.4%): two wrong-to-correct, four correct-to-wrong, and two wrong-to-different-wrong changes. This crosses dates and routes; it cannot identify whether the differences arose from provider processing, inference variation, caching or other serving changes. It is not evidence of Jev 1.14. Its $0.00629882 reported cost is separate from the extension. One recheck probability distribution also summed to 0.99; the same choice-only scoring policy applies. The recheck does <strong>not</strong> replace any reference answer.</p>
+<h2>Validation and limitations</h2>
+<p>Question hashes, native packet identities, returned snapshots, first-response retention, attempt ledgers and aggregate arithmetic are checked. All scores use the original external answer key; its fingerprint matches the original comparison. The key has deterministic solver validation but has not received a fully independent audit of every printed English question. These results do not certify that key. There is no Jev 1.14 or multimodal evidence in this report. Confidence filtering is exploratory, not a verified deployment guarantee.</p>
+<h2>Artifacts and reproduction</h2>
+<ul>
+<li><a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/selection_manifest.json">Selection and panel manifest</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/questions_136.csv">136 new questions</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/questions_1136.csv">all 1,136 questions</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/reference_manifest.json">reference hashes</a>.</li>
+<li><a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/results_jev.csv">Jev raw results</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/results_luna.csv">Luna raw results</a>, and attempt ledgers (<code>attempts_jev.jsonl</code>, <code>attempts_luna.jsonl</code>).</li>
+<li><a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/decisions_jev_1136.csv">Normalized Jev reference</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/decisions_luna_1136.csv">normalized Luna reference</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/summary.json">aggregate summary</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/checksums.json">checksums</a>.</li>
+<li><a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/recheck_256/results_completed.csv">Separate 256-question recheck</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/recheck_256/attempts.jsonl">recheck attempts</a>, <a href="https://github.com/etsabary/jev-deterministic-benchmark/blob/main/extension_136/recheck_256/run_manifest.json">recheck manifest</a>.</li>
+</ul>
+<p>The canonical reproduction scripts live in <a href="https://github.com/etsabary/luna-decisions-benchmark">luna-decisions-benchmark</a>. <code>python3 validate_extension.py</code> checks the public evidence without a key or network. <code>python3 analyze_extension.py --answer-key /path/to/answer_key_PRIVATE.csv --recheck-dir extension_136/recheck_256</code> reproduces gold-dependent aggregates. <code>python3 run_extension.py run --model jev</code> (or <code>luna</code>) is a dry-run; add <code>--execute --env-file /external/path/.env</code> only for a separately recorded paid replay. Published output files are retained on resume; a new paid replay requires a separate output destination, not deleting frozen responses.</p></main></html>

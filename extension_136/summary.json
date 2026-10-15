@@ -1,0 +1,1188 @@
+{
+  "answer_key_sha256": "8376ddce67cd9bb5f62d685d0309b4de5706f091084fbe72aed7dc91d1bf4dec",
+  "date": "2026-10-14",
+  "reference_policy": "Original 1,000 first responses plus exactly 136 new questions; no replacements from the repeatability recheck",
+  "scoring_policy": "Score a valid typed choice even when probabilities do not sum to one; preserve and flag original strict-parser failures; no probability renormalization",
+  "selection": {
+    "additional": 136,
+    "stage_counts": [
+      68,
+      57,
+      11
+    ],
+    "rotation_levels": {
+      "3": 4,
+      "4": 5,
+      "1": 11,
+      "2": 5
+    }
+  },
+  "extension": {
+    "jev": {
+      "attempted": 136,
+      "answered": 136,
+      "correct": 93,
+      "wrong": 43,
+      "unanswered": 0,
+      "accuracy_attempted": 0.6838235294117647,
+      "accuracy_answered": 0.6838235294117647,
+      "probability_warnings": 3
+    },
+    "luna": {
+      "attempted": 136,
+      "answered": 130,
+      "correct": 75,
+      "wrong": 55,
+      "unanswered": 6,
+      "accuracy_attempted": 0.5514705882352942,
+      "accuracy_answered": 0.5769230769230769,
+      "probability_warnings": 0
+    }
+  },
+  "reference_1136": {
+    "jev": {
+      "attempted": 1136,
+      "answered": 1136,
+      "correct": 910,
+      "wrong": 226,
+      "unanswered": 0,
+      "accuracy_attempted": 0.801056338028169,
+      "accuracy_answered": 0.801056338028169,
+      "probability_warnings": 13
+    },
+    "luna": {
+      "attempted": 1136,
+      "answered": 1113,
+      "correct": 687,
+      "wrong": 426,
+      "unanswered": 23,
+      "accuracy_attempted": 0.6047535211267606,
+      "accuracy_answered": 0.6172506738544474,
+      "probability_warnings": 0
+    }
+  },
+  "diagnostics": {
+    "jev": {
+      "rotation": {
+        "planned": 25,
+        "complete_answered": 25,
+        "all_five_correct": 21,
+        "same_semantic_choice": 22,
+        "changed_semantic_choice": 3,
+        "correct_of_125": 109
+      },
+      "contrast": {
+        "planned": 25,
+        "complete_answered": 25,
+        "both_correct": 20,
+        "answer_changed": 24,
+        "base_correct_complete_pairs": 21,
+        "contrast_correct_given_base_correct": 20
+      },
+      "candidate_checks": {
+        "planned_parents": 16,
+        "planned_checks": 80,
+        "complete_answered": 16,
+        "parent_correct": 9,
+        "checks_correct": 36,
+        "checks_answered": 80,
+        "all_five_checks_correct": 1,
+        "parent_and_all_checks_correct": 1,
+        "wrong_parent_all_checks_correct": 0
+      }
+    },
+    "luna": {
+      "rotation": {
+        "planned": 25,
+        "complete_answered": 21,
+        "all_five_correct": 14,
+        "same_semantic_choice": 15,
+        "changed_semantic_choice": 6,
+        "correct_of_125": 89
+      },
+      "contrast": {
+        "planned": 25,
+        "complete_answered": 22,
+        "both_correct": 13,
+        "answer_changed": 14,
+        "base_correct_complete_pairs": 18,
+        "contrast_correct_given_base_correct": 13
+      },
+      "candidate_checks": {
+        "planned_parents": 16,
+        "planned_checks": 80,
+        "complete_answered": 12,
+        "parent_correct": 6,
+        "checks_correct": 32,
+        "checks_answered": 79,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    }
+  },
+  "timing_extension": {
+    "jev": {
+      "n": 136,
+      "median_ms": 154.38297900254838,
+      "p95_ms": 245.47588574932888
+    },
+    "luna": {
+      "n": 130,
+      "median_ms": 237.27177100954577,
+      "p95_ms": 714.4542145630112
+    }
+  },
+  "usage_extension": {
+    "jev": {
+      "http_attempts": 136,
+      "attempts_with_cost": 136,
+      "reported_cost_usd": 0.003161339999999999,
+      "input_tokens": 75270,
+      "output_tokens": 7072,
+      "returned_models": {
+        "typesafe/jev-1.13-20260917": 136
+      }
+    },
+    "luna": {
+      "http_attempts": 142,
+      "attempts_with_cost": 130,
+      "reported_cost_usd": 0.004391899999999998,
+      "input_tokens": 43919,
+      "output_tokens": 0,
+      "returned_models": {
+        "openai/gpt-6-luna-decisions-20261006": 130,
+        "unreported (error)": 6
+      }
+    }
+  },
+  "common_answered_panels": {
+    "rotation": {
+      "n": 21,
+      "jev": {
+        "planned": 21,
+        "complete_answered": 21,
+        "all_five_correct": 18,
+        "same_semantic_choice": 18,
+        "changed_semantic_choice": 3,
+        "correct_of_125": 94
+      },
+      "luna": {
+        "planned": 21,
+        "complete_answered": 21,
+        "all_five_correct": 14,
+        "same_semantic_choice": 15,
+        "changed_semantic_choice": 6,
+        "correct_of_125": 81
+      }
+    },
+    "contrast": {
+      "n": 22,
+      "jev": {
+        "planned": 22,
+        "complete_answered": 22,
+        "both_correct": 18,
+        "answer_changed": 21,
+        "base_correct_complete_pairs": 19,
+        "contrast_correct_given_base_correct": 18
+      },
+      "luna": {
+        "planned": 22,
+        "complete_answered": 22,
+        "both_correct": 13,
+        "answer_changed": 14,
+        "base_correct_complete_pairs": 18,
+        "contrast_correct_given_base_correct": 13
+      }
+    },
+    "candidate_checks": {
+      "n": 12,
+      "jev": {
+        "planned_parents": 12,
+        "planned_checks": 60,
+        "complete_answered": 12,
+        "parent_correct": 7,
+        "checks_correct": 26,
+        "checks_answered": 60,
+        "all_five_checks_correct": 1,
+        "parent_and_all_checks_correct": 1,
+        "wrong_parent_all_checks_correct": 0
+      },
+      "luna": {
+        "planned_parents": 12,
+        "planned_checks": 60,
+        "complete_answered": 12,
+        "parent_correct": 5,
+        "checks_correct": 24,
+        "checks_answered": 60,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    }
+  },
+  "extension_paired": {
+    "n": 130,
+    "both_correct": 60,
+    "jev_only_correct": 30,
+    "luna_only_correct": 15,
+    "both_wrong": 25
+  },
+  "by_family": [
+    {
+      "family": "Boolean scope and exclusivity",
+      "jev": {
+        "attempted": 48,
+        "answered": 48,
+        "correct": 47,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9791666666666666,
+        "accuracy_answered": 0.9791666666666666,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 48,
+        "answered": 48,
+        "correct": 33,
+        "wrong": 15,
+        "unanswered": 0,
+        "accuracy_attempted": 0.6875,
+        "accuracy_answered": 0.6875,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Deterministic causal intervention",
+      "jev": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 36,
+        "wrong": 8,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8181818181818182,
+        "accuracy_answered": 0.8181818181818182,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 20,
+        "wrong": 24,
+        "unanswered": 0,
+        "accuracy_attempted": 0.45454545454545453,
+        "accuracy_answered": 0.45454545454545453,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Deterministic fault diagnosis",
+      "jev": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 43,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9772727272727273,
+        "accuracy_answered": 0.9772727272727273,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 44,
+        "answered": 43,
+        "correct": 33,
+        "wrong": 10,
+        "unanswered": 1,
+        "accuracy_attempted": 0.75,
+        "accuracy_answered": 0.7674418604651163,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Deterministic preference ordering",
+      "jev": {
+        "attempted": 45,
+        "answered": 45,
+        "correct": 44,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9777777777777777,
+        "accuracy_answered": 0.9777777777777777,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 45,
+        "answered": 45,
+        "correct": 44,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9777777777777777,
+        "accuracy_answered": 0.9777777777777777,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Directed reachability",
+      "jev": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 37,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 37,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Exact truth counting",
+      "jev": {
+        "attempted": 65,
+        "answered": 65,
+        "correct": 24,
+        "wrong": 41,
+        "unanswered": 0,
+        "accuracy_attempted": 0.36923076923076925,
+        "accuracy_answered": 0.36923076923076925,
+        "probability_warnings": 2
+      },
+      "luna": {
+        "attempted": 65,
+        "answered": 65,
+        "correct": 19,
+        "wrong": 46,
+        "unanswered": 0,
+        "accuracy_attempted": 0.2923076923076923,
+        "accuracy_answered": 0.2923076923076923,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Exceptions and priority rules",
+      "jev": {
+        "attempted": 52,
+        "answered": 52,
+        "correct": 48,
+        "wrong": 4,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9230769230769231,
+        "accuracy_answered": 0.9230769230769231,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 52,
+        "answered": 52,
+        "correct": 45,
+        "wrong": 7,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8653846153846154,
+        "accuracy_answered": 0.8653846153846154,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Forward conditional reasoning",
+      "jev": {
+        "attempted": 39,
+        "answered": 39,
+        "correct": 39,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 39,
+        "answered": 34,
+        "correct": 24,
+        "wrong": 10,
+        "unanswered": 5,
+        "accuracy_attempted": 0.6153846153846154,
+        "accuracy_answered": 0.7058823529411765,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Necessary conditions and contraposition",
+      "jev": {
+        "attempted": 46,
+        "answered": 46,
+        "correct": 45,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9782608695652174,
+        "accuracy_answered": 0.9782608695652174,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 46,
+        "answered": 46,
+        "correct": 13,
+        "wrong": 33,
+        "unanswered": 0,
+        "accuracy_attempted": 0.2826086956521739,
+        "accuracy_answered": 0.2826086956521739,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Nested role and reference binding",
+      "jev": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 34,
+        "wrong": 10,
+        "unanswered": 0,
+        "accuracy_attempted": 0.7727272727272727,
+        "accuracy_answered": 0.7727272727272727,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 20,
+        "wrong": 24,
+        "unanswered": 0,
+        "accuracy_attempted": 0.45454545454545453,
+        "accuracy_answered": 0.45454545454545453,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Object tracking through swaps",
+      "jev": {
+        "attempted": 46,
+        "answered": 46,
+        "correct": 29,
+        "wrong": 17,
+        "unanswered": 0,
+        "accuracy_attempted": 0.6304347826086957,
+        "accuracy_answered": 0.6304347826086957,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 46,
+        "answered": 45,
+        "correct": 16,
+        "wrong": 29,
+        "unanswered": 1,
+        "accuracy_attempted": 0.34782608695652173,
+        "accuracy_answered": 0.35555555555555557,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "One-to-one assignments",
+      "jev": {
+        "attempted": 61,
+        "answered": 61,
+        "correct": 49,
+        "wrong": 12,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8032786885245902,
+        "accuracy_answered": 0.8032786885245902,
+        "probability_warnings": 2
+      },
+      "luna": {
+        "attempted": 61,
+        "answered": 53,
+        "correct": 35,
+        "wrong": 18,
+        "unanswered": 8,
+        "accuracy_attempted": 0.5737704918032787,
+        "accuracy_answered": 0.660377358490566,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Perspective and belief tracking",
+      "jev": {
+        "attempted": 44,
+        "answered": 44,
+        "correct": 39,
+        "wrong": 5,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8863636363636364,
+        "accuracy_answered": 0.8863636363636364,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 44,
+        "answered": 43,
+        "correct": 32,
+        "wrong": 11,
+        "unanswered": 1,
+        "accuracy_attempted": 0.7272727272727273,
+        "accuracy_answered": 0.7441860465116279,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Planning with preconditions",
+      "jev": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 35,
+        "wrong": 2,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9459459459459459,
+        "accuracy_answered": 0.9459459459459459,
+        "probability_warnings": 2
+      },
+      "luna": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 28,
+        "wrong": 9,
+        "unanswered": 0,
+        "accuracy_attempted": 0.7567567567567568,
+        "accuracy_answered": 0.7567567567567568,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Quantifiers and set relations",
+      "jev": {
+        "attempted": 43,
+        "answered": 43,
+        "correct": 42,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9767441860465116,
+        "accuracy_answered": 0.9767441860465116,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 43,
+        "answered": 43,
+        "correct": 38,
+        "wrong": 5,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8837209302325582,
+        "accuracy_answered": 0.8837209302325582,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Record lookup and filtering",
+      "jev": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 37,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 37,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Rule verification and counterexamples",
+      "jev": {
+        "attempted": 46,
+        "answered": 46,
+        "correct": 45,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9782608695652174,
+        "accuracy_answered": 0.9782608695652174,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 46,
+        "answered": 45,
+        "correct": 36,
+        "wrong": 9,
+        "unanswered": 1,
+        "accuracy_attempted": 0.782608695652174,
+        "accuracy_answered": 0.8,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Scheduling constraints",
+      "jev": {
+        "attempted": 69,
+        "answered": 69,
+        "correct": 43,
+        "wrong": 26,
+        "unanswered": 0,
+        "accuracy_attempted": 0.6231884057971014,
+        "accuracy_answered": 0.6231884057971014,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 69,
+        "answered": 66,
+        "correct": 25,
+        "wrong": 41,
+        "unanswered": 3,
+        "accuracy_attempted": 0.36231884057971014,
+        "accuracy_answered": 0.3787878787878788,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Sequential procedure execution",
+      "jev": {
+        "attempted": 42,
+        "answered": 42,
+        "correct": 5,
+        "wrong": 37,
+        "unanswered": 0,
+        "accuracy_attempted": 0.11904761904761904,
+        "accuracy_answered": 0.11904761904761904,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 42,
+        "answered": 42,
+        "correct": 9,
+        "wrong": 33,
+        "unanswered": 0,
+        "accuracy_attempted": 0.21428571428571427,
+        "accuracy_answered": 0.21428571428571427,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Source authority and stale records",
+      "jev": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 37,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 37,
+        "answered": 37,
+        "correct": 31,
+        "wrong": 6,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8378378378378378,
+        "accuracy_answered": 0.8378378378378378,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Sufficiency and inconsistency",
+      "jev": {
+        "attempted": 35,
+        "answered": 35,
+        "correct": 28,
+        "wrong": 7,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8,
+        "accuracy_answered": 0.8,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 35,
+        "answered": 35,
+        "correct": 19,
+        "wrong": 16,
+        "unanswered": 0,
+        "accuracy_attempted": 0.5428571428571428,
+        "accuracy_answered": 0.5428571428571428,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Temporal interval relations",
+      "jev": {
+        "attempted": 36,
+        "answered": 36,
+        "correct": 35,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9722222222222222,
+        "accuracy_answered": 0.9722222222222222,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 36,
+        "answered": 36,
+        "correct": 19,
+        "wrong": 17,
+        "unanswered": 0,
+        "accuracy_attempted": 0.5277777777777778,
+        "accuracy_answered": 0.5277777777777778,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Transitive comparisons",
+      "jev": {
+        "attempted": 34,
+        "answered": 34,
+        "correct": 34,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 34,
+        "answered": 34,
+        "correct": 33,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9705882352941176,
+        "accuracy_answered": 0.9705882352941176,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Truth-teller consistency",
+      "jev": {
+        "attempted": 62,
+        "answered": 62,
+        "correct": 31,
+        "wrong": 31,
+        "unanswered": 0,
+        "accuracy_attempted": 0.5,
+        "accuracy_answered": 0.5,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 62,
+        "answered": 61,
+        "correct": 20,
+        "wrong": 41,
+        "unanswered": 1,
+        "accuracy_attempted": 0.3225806451612903,
+        "accuracy_answered": 0.32786885245901637,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "family": "Verbal spatial tracking",
+      "jev": {
+        "attempted": 43,
+        "answered": 43,
+        "correct": 24,
+        "wrong": 19,
+        "unanswered": 0,
+        "accuracy_attempted": 0.5581395348837209,
+        "accuracy_answered": 0.5581395348837209,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 43,
+        "answered": 41,
+        "correct": 21,
+        "wrong": 20,
+        "unanswered": 2,
+        "accuracy_attempted": 0.4883720930232558,
+        "accuracy_answered": 0.5121951219512195,
+        "probability_warnings": 0
+      }
+    }
+  ],
+  "by_level": [
+    {
+      "level": "1",
+      "jev": {
+        "attempted": 306,
+        "answered": 306,
+        "correct": 285,
+        "wrong": 21,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9313725490196079,
+        "accuracy_answered": 0.9313725490196079,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 306,
+        "answered": 300,
+        "correct": 234,
+        "wrong": 66,
+        "unanswered": 6,
+        "accuracy_attempted": 0.7647058823529411,
+        "accuracy_answered": 0.78,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "level": "2",
+      "jev": {
+        "attempted": 286,
+        "answered": 286,
+        "correct": 236,
+        "wrong": 50,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8251748251748252,
+        "accuracy_answered": 0.8251748251748252,
+        "probability_warnings": 3
+      },
+      "luna": {
+        "attempted": 286,
+        "answered": 282,
+        "correct": 180,
+        "wrong": 102,
+        "unanswered": 4,
+        "accuracy_attempted": 0.6293706293706294,
+        "accuracy_answered": 0.6382978723404256,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "level": "3",
+      "jev": {
+        "attempted": 265,
+        "answered": 265,
+        "correct": 198,
+        "wrong": 67,
+        "unanswered": 0,
+        "accuracy_attempted": 0.7471698113207547,
+        "accuracy_answered": 0.7471698113207547,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 265,
+        "answered": 261,
+        "correct": 131,
+        "wrong": 130,
+        "unanswered": 4,
+        "accuracy_attempted": 0.49433962264150944,
+        "accuracy_answered": 0.5019157088122606,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "level": "4",
+      "jev": {
+        "attempted": 279,
+        "answered": 279,
+        "correct": 191,
+        "wrong": 88,
+        "unanswered": 0,
+        "accuracy_attempted": 0.6845878136200717,
+        "accuracy_answered": 0.6845878136200717,
+        "probability_warnings": 8
+      },
+      "luna": {
+        "attempted": 279,
+        "answered": 270,
+        "correct": 142,
+        "wrong": 128,
+        "unanswered": 9,
+        "accuracy_attempted": 0.5089605734767025,
+        "accuracy_answered": 0.5259259259259259,
+        "probability_warnings": 0
+      }
+    }
+  ],
+  "by_role": [
+    {
+      "role": "contrast",
+      "jev": {
+        "attempted": 42,
+        "answered": 42,
+        "correct": 36,
+        "wrong": 6,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8571428571428571,
+        "accuracy_answered": 0.8571428571428571,
+        "probability_warnings": 0
+      },
+      "luna": {
+        "attempted": 42,
+        "answered": 42,
+        "correct": 27,
+        "wrong": 15,
+        "unanswered": 0,
+        "accuracy_attempted": 0.6428571428571429,
+        "accuracy_answered": 0.6428571428571429,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "role": "core",
+      "jev": {
+        "attempted": 640,
+        "answered": 640,
+        "correct": 530,
+        "wrong": 110,
+        "unanswered": 0,
+        "accuracy_attempted": 0.828125,
+        "accuracy_answered": 0.828125,
+        "probability_warnings": 10
+      },
+      "luna": {
+        "attempted": 640,
+        "answered": 626,
+        "correct": 401,
+        "wrong": 225,
+        "unanswered": 14,
+        "accuracy_attempted": 0.6265625,
+        "accuracy_answered": 0.6405750798722045,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "role": "probe",
+      "jev": {
+        "attempted": 80,
+        "answered": 80,
+        "correct": 36,
+        "wrong": 44,
+        "unanswered": 0,
+        "accuracy_attempted": 0.45,
+        "accuracy_answered": 0.45,
+        "probability_warnings": 1
+      },
+      "luna": {
+        "attempted": 80,
+        "answered": 79,
+        "correct": 32,
+        "wrong": 47,
+        "unanswered": 1,
+        "accuracy_attempted": 0.4,
+        "accuracy_answered": 0.4050632911392405,
+        "probability_warnings": 0
+      }
+    },
+    {
+      "role": "robustness",
+      "jev": {
+        "attempted": 374,
+        "answered": 374,
+        "correct": 308,
+        "wrong": 66,
+        "unanswered": 0,
+        "accuracy_attempted": 0.8235294117647058,
+        "accuracy_answered": 0.8235294117647058,
+        "probability_warnings": 2
+      },
+      "luna": {
+        "attempted": 374,
+        "answered": 366,
+        "correct": 227,
+        "wrong": 139,
+        "unanswered": 8,
+        "accuracy_attempted": 0.606951871657754,
+        "accuracy_answered": 0.6202185792349727,
+        "probability_warnings": 0
+      }
+    }
+  ],
+  "confidence_1136": {
+    "jev": [
+      {
+        "threshold": 0.8,
+        "attempted": 696,
+        "answered": 696,
+        "correct": 682,
+        "wrong": 14,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9798850574712644,
+        "accuracy_answered": 0.9798850574712644,
+        "probability_warnings": 3
+      },
+      {
+        "threshold": 0.9,
+        "attempted": 611,
+        "answered": 611,
+        "correct": 607,
+        "wrong": 4,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9934533551554828,
+        "accuracy_answered": 0.9934533551554828,
+        "probability_warnings": 3
+      },
+      {
+        "threshold": 0.95,
+        "attempted": 544,
+        "answered": 544,
+        "correct": 543,
+        "wrong": 1,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9981617647058824,
+        "accuracy_answered": 0.9981617647058824,
+        "probability_warnings": 0
+      }
+    ],
+    "luna": [
+      {
+        "threshold": 0.8,
+        "attempted": 223,
+        "answered": 223,
+        "correct": 220,
+        "wrong": 3,
+        "unanswered": 0,
+        "accuracy_attempted": 0.9865470852017937,
+        "accuracy_answered": 0.9865470852017937,
+        "probability_warnings": 0
+      },
+      {
+        "threshold": 0.9,
+        "attempted": 142,
+        "answered": 142,
+        "correct": 142,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      },
+      {
+        "threshold": 0.95,
+        "attempted": 96,
+        "answered": 96,
+        "correct": 96,
+        "wrong": 0,
+        "unanswered": 0,
+        "accuracy_attempted": 1.0,
+        "accuracy_answered": 1.0,
+        "probability_warnings": 0
+      }
+    ]
+  },
+  "candidate_by_family": [
+    {
+      "family_id": "F07",
+      "family": "Scheduling constraints",
+      "jev": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 4,
+        "parent_correct": 3,
+        "checks_correct": 9,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      },
+      "luna": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 3,
+        "parent_correct": 1,
+        "checks_correct": 7,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    },
+    {
+      "family_id": "F08",
+      "family": "One-to-one assignments",
+      "jev": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 4,
+        "parent_correct": 3,
+        "checks_correct": 14,
+        "checks_answered": 20,
+        "all_five_checks_correct": 1,
+        "parent_and_all_checks_correct": 1,
+        "wrong_parent_all_checks_correct": 0
+      },
+      "luna": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 2,
+        "parent_correct": 2,
+        "checks_correct": 9,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    },
+    {
+      "family_id": "F09",
+      "family": "Exact truth counting",
+      "jev": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 4,
+        "parent_correct": 1,
+        "checks_correct": 8,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      },
+      "luna": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 4,
+        "parent_correct": 1,
+        "checks_correct": 10,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    },
+    {
+      "family_id": "F10",
+      "family": "Truth-teller consistency",
+      "jev": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 4,
+        "parent_correct": 2,
+        "checks_correct": 5,
+        "checks_answered": 20,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      },
+      "luna": {
+        "planned_parents": 4,
+        "planned_checks": 20,
+        "complete_answered": 3,
+        "parent_correct": 2,
+        "checks_correct": 6,
+        "checks_answered": 19,
+        "all_five_checks_correct": 0,
+        "parent_and_all_checks_correct": 0,
+        "wrong_parent_all_checks_correct": 0
+      }
+    }
+  ],
+  "recheck_256": {
+    "n": 256,
+    "old_correct": 213,
+    "new_correct": 211,
+    "same_choice": 248,
+    "wrong_to_correct": 2,
+    "correct_to_wrong": 4,
+    "both_wrong": 41,
+    "both_correct": 209,
+    "returned_models": {
+      "typesafe/jev-1.13-20260917": 256
+    },
+    "reported_cost_usd": 0.006298824000000003
+  }
+}

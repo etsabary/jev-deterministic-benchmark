@@ -1,5 +1,11 @@
 # Jev 1.13 — Deterministic Decision Benchmark
 
+## Expanded reference: 1,136 questions, 14 October 2026
+
+The [expanded Jev 1.13 and GPT-6 Luna Decisions report](extension_136/README.md) adds 136 questions to complete matched diagnostic tests. Jev scores **910/1,136 (80.1%)**; Luna scores **687/1,136 (60.5%)**, with 23 unanswered items. The total includes dependent variants, so the report separates overall reference scores from the diagnostic panels. The original 1,000-question results below remain unchanged.
+
+Jev remains strong at applying stated rules to a supplied situation. The added tests also show that checking a supplied candidate can fail, and that balanced option counts do not establish position invariance. The report includes exact snapshots and dates, [ability graphics](extension_136/abilities_baseline.png), and frozen input and response hashes. No Jev 1.14 results enter this reference.
+
 I wanted to understand what kinds of decisions Jev actually makes well.
 
 On **22 September 2026**, I tested the **Jev 1.13 release** on 1,000 deterministic decisions across 25 reasoning families on the `JEV-DD-1.0` benchmark. Requests used `jev-latest`; the version details recorded by each provider are below. The overall accuracy was 81.7%, but the average hides a much more interesting pattern.
@@ -199,7 +205,7 @@ Of the 493 decisions with reported confidence $\ge 0.95$ (nearly half of all dec
   * Option 3: **188 (18.8%)**
   * Option 4: **198 (19.8%)**
   * Option 5: **207 (20.7%)**
-* **Semantic Invariance:** Across 94 pairs where option order was rotated, Jev chose the same underlying semantic meaning **92.6% of the time** (and **100%** on 15 identical clones), showing that it tracks meaning rather than slot position.
+* **Matched semantic consistency:** The expanded study now completes one five-position panel per reasoning family. Jev chooses the same semantic answer in **22/25** panels and answers all five rotations correctly in **21/25**. Three panels change semantic choice. Uniform overall selection counts therefore do not establish position invariance. See the [matched results](extension_136/README.md).
 
 ---
 

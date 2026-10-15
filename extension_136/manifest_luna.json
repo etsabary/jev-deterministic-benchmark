@@ -1,0 +1,14 @@
+{
+  "model_requested": "openai/gpt-6-luna-decisions",
+  "required_returned_model": "openai/gpt-6-luna-decisions-20261006",
+  "endpoint": "https://openrouter.ai/api/alpha/decisions",
+  "run_id": "extension_136_luna_20261014",
+  "questions_sha256": "cd559b3c61b9c234e60b6e778d1b7be06306882ca254050e56fe7ea99a506b45",
+  "selection_sha256": "c25c21d014d3c21d49585ea399a355fdf3a475bf4eb0c6b9826ef6a2a0bbc43f",
+  "max_attempts_per_item": 2,
+  "timeout_seconds": 20,
+  "workers": 4,
+  "max_http_attempts": 272,
+  "reported_cost_cap_usd": 0.1,
+  "policy": "First valid answer retained; completed errors final on resume; no answer feedback; exact returned-version guard; no cross-model failover"
+}
